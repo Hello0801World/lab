@@ -16,9 +16,9 @@ class Television:
         - channel should be MIN_CHANNEL (0) by default
         - volume should be MIN_VOLUME (0) by default
         """
-        self.__status = False
-        self.__channel = self.MIN_CHANNEL
-        self.__volume = self.MIN_VOLUME
+        self.__status:bool = False
+        self.__channel:int = self.MIN_CHANNEL
+        self.__volume:int = self.MIN_VOLUME
 
 
     def power(self) ->None:
