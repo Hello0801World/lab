@@ -9,7 +9,7 @@ class Television:
     MIN_VOLUME = 0      # Minimum TV volume
     MAX_VOLUME = 2      # Maximum TV volume
 
-    def __init__(self) -> None:
+    def __init__(self) ->None:
         """
         Constructor to create initial state of a television object
         - status should be False by default (meaning tv turned off)
@@ -68,10 +68,11 @@ class Television:
                 pass
 
     def volume_down(self) ->None:
-        '''
+        """
         Method to volume up. It should work only if a tv is on.
         If the volume is equal to MIN_VOLUME, the volume should not be adjusted.
-        '''
+        """
+
 
         if self.__status==True:
             if self.__volume>self.MIN_VOLUME and self.__volume<=self.MAX_VOLUME:
