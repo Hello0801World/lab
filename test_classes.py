@@ -18,6 +18,10 @@ class Test:
     def test_channel_up(self):
         assert self.tv1.__str__() == 'TV status on =False, Channel = 0, Volume = 0'
 
+
+        self.tv1.channel_up()
+        assert self.tv1.__str__()=='TV status on =False, Channel = 0, Volume = 0'
+
         self.tv1.power()
         self.tv1.channel_up()
         assert self.tv1.__str__()=='TV status on =True, Channel = 1, Volume = 0'
@@ -30,6 +34,9 @@ class Test:
         assert self.tv1.__str__()=='TV status on =True, Channel = 0, Volume = 0'
 
     def test_channel_down(self):
+        assert self.tv1.__str__()=='TV status on =False, Channel = 0, Volume = 0'
+
+        self.tv1.channel_down()
         assert self.tv1.__str__()=='TV status on =False, Channel = 0, Volume = 0'
 
         self.tv1.power()
@@ -46,6 +53,9 @@ class Test:
     def test_volume_up(self):
         assert self.tv1.__str__() == 'TV status on =False, Channel = 0, Volume = 0'
 
+        self.tv1.volume_up()
+        assert self.tv1.__str__()=='TV status on =False, Channel = 0, Volume = 0'
+
         self.tv1.power()
         self.tv1.volume_up()
         assert self.tv1.__str__() == 'TV status on =True, Channel = 0, Volume = 1'
@@ -58,6 +68,9 @@ class Test:
     def test_volume_down(self):
 
         assert self.tv1.__str__() == 'TV status on =False, Channel = 0, Volume = 0'
+
+        self.tv1.volume_down()
+        assert self.tv1.__str__()=='TV status on =False, Channel = 0, Volume = 0'
 
         self.tv1.power()
         self.tv1.volume_up()
